@@ -12,9 +12,11 @@ class CardController extends Controller
         return view('home');
     }
 
-    public function show()
+    public function show($segment)
     {
-        return view('form');
+        return view('form', [
+            'segment' => $segment 
+        ]);
     }
 
 
