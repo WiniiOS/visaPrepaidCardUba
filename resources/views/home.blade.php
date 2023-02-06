@@ -1,25 +1,21 @@
 @extends('layouts.app')
 
-@section('content')
-    
-    @include('partials.spinner')
+@section('content')    
 
+    @include('partials.spinner')
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
-
         @include('partials.navbar')
-
         <!-- Slider -->
         @include('partials.slide')
-
     </div>
     <!-- Navbar & Carousel End -->
 
     <!-- About Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div id='about' class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-7">
+                <div class="col-lg-7" >
                     <div class="section-title position-relative pb-3 mb-5">
                         <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
                         <h1 class="mb-0">Qui sommes-nous ?</h1>
@@ -85,7 +81,7 @@
                 </div>
                 <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="{{ url('imports/img/feature.jpg') }}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="{{ url('imports/img/feature.png') }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -110,7 +106,6 @@
         </div>
     </div>
     <!-- Features Start -->
-
 
     <!-- Service Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -192,38 +187,37 @@
     </div>
     <!-- Service End -->
 
-
     <!-- Pricing Plan Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div id="cardGrid" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Pricing Plans</h5>
-                <h1 class="mb-0">We are Offering Competitive Prices for Our Clients</h1>
+                <h5 class="fw-bold text-primary text-uppercase">Nos tarifs</h5>
+                <h1 class="mb-0">Nous vous offrons 3 segments de cartes pré-payées</h1>
             </div>
             <div class="row g-0">
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
                     <div class="bg-light rounded">
                         <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Basic Plan</h4>
+                            <h4 class="text-primary mb-1">Segment 1</h4>
                             <small class="text-uppercase">For Small Size Business</small>
                         </div>
                         <div class="p-5 pt-0">
                             <h1 class="display-5 mb-3">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;"></small>12.500<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">Fcfa / Mois</small>
                             </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Validité 1 ans</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-times text-danger pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                            <a href="{{ route('form') }}" class="btn btn-primary py-2 px-4 mt-4">Commander</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
                     <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
                         <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Standard Plan</h4>
+                            <h4 class="text-primary mb-1">Segment 2</h4>
                             <small class="text-uppercase">For Medium Size Business</small>
                         </div>
                         <div class="p-5 pt-0">
@@ -235,14 +229,14 @@
                             <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                            <a href="{{ route('form') }}" class="btn btn-primary py-2 px-4 mt-4">Commander</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
                     <div class="bg-light rounded">
                         <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Advanced Plan</h4>
+                            <h4 class="text-primary mb-1">Segment 3</h4>
                             <small class="text-uppercase">For Large Size Business</small>
                         </div>
                         <div class="p-5 pt-0">
@@ -254,7 +248,7 @@
                             <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                            <a href="{{ route('form') }}" class="btn btn-primary py-2 px-4 mt-4">Commander</a>
                         </div>
                     </div>
                 </div>
@@ -262,7 +256,6 @@
         </div>
     </div>
     <!-- Pricing Plan End -->
-
 
     <!-- Quote Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -281,6 +274,7 @@
                             <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24 hrs telephone support</h5>
                         </div>
                     </div>
+                    
                     <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
                     <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
@@ -386,32 +380,8 @@
         </div>
     </div>
     <!-- Testimonial End -->
-
-
     
 
-
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="{{ url('imports/img/vendor-1.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-2.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-3.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-4.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-5.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-6.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-7.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-8.jpg') }}" alt="">
-                    <img src="{{ url('imports/img/vendor-9.jpg') }}" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
-    
-    
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 

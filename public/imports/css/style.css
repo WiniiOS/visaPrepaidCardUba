@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06A3DA;
+    --primary: #f49821;
     --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E;
@@ -153,6 +153,17 @@ h6,
 .navbar-dark .navbar-toggler {
     color: var(--primary) !important;
     border-color: var(--primary) !important;
+}
+
+.btn-primary {
+    color: var(--light) !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;;
+}
+
+.btn-primary:hover {
+    color: #0f52e0 !important;
+    
 }
 
 @media (max-width: 991.98px) {
