@@ -20,16 +20,19 @@
             </div>
 
             <div class="col-lg-10 offset-1 wow slideInUp" data-wow-delay="0.6s">
-                    <img src="{{ url('imports/img/banderole.jpg') }}" alt="">
+                <img src="{{ url('imports/img/banderole.jpg') }}" alt="">
             </div>
 
             <br>
 
-
             <div class="row g-5">
                 <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
-
-                <form action="{{ route('subscribeForm') }}" method="post">
+                @if($errors->any())
+                    @foreach($errors->all() as $error)
+                        <div class='text-red-500'>{{ $error }}</div>
+                    @endforeach
+                @endif
+                <form action="{{ route('subscribeForm') }}" method="POST">
                         @csrf
                         <div class="row g-3">
                             <div class="col-md-4">
@@ -38,53 +41,49 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="">Surname/Nom de Famille <span style="color:red;">*</span></label>
-                                <input name='surname' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
+                                <input required name='surname' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">Middle Name/Prenom <span style="color:red;">*</span></label>
-                                <input name='lastname' type="text" class="form-control border-0 bg-light px-4" style="height: 55px;">
+                                <input required name='lastname' type="text" class="form-control border-0 bg-light px-4" style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">City/Ville <span style="color:red;">*</span></label>
-                                <input name='city' type="text" class="form-control border-0 bg-light px-4" placeholder="Adresse e-mail" style="height: 55px;">
+                                <input required name='city' type="text" class="form-control border-0 bg-light px-4" style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">Residential Address/Quartier <span style="color:red;">*</span></label>
-                                <input name='residentialAdress' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="">Email Address 1 <span style="color:red;">*</span></label>
-                                <input name='emailAdress'  type="email" class="form-control border-0 bg-light px-4" style="height: 55px;">
+                                <input required name='residentialAddress' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">Telephone Number/Numero de telephone <span style="color:red;">*</span></label>
-                                <input  name='phone1' type="number" class="form-control border-0 bg-light px-4" placeholder="Adresse e-mail" style="height: 55px;">
+                                <input  required name='phone1' type="number" class="form-control border-0 bg-light px-4" style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">Telephone Number/Numero de telephone 2 (Optionel) </label>
-                                <input name='phone2' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
+                                <input name='phone2' type="number" class="form-control border-0 bg-light px-4"  style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">National ID Card Number/Numero de la CNI<span style="color:red;">*</span></label>
-                                <input  name='cniNumber' type="number" class="form-control border-0 bg-light px-4" style="height: 55px;">
+                                <input required  name='cniNumber' type="number" class="form-control border-0 bg-light px-4" style="height: 55px;">
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-md-4">
                                 <label for="">Lieux d'etablisement de la CNI<span style="color:red;">*</span></label>
-                                <input name='birthday' type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
+                                <input required name='lieuCreationCni' type="text" class="form-control border-0 bg-light px-4" style="height: 55px;">
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-4">
                                 <label for="">Date de Naissance<span style="color:red;">*</span></label>
-                                <input name='passeport' type="date" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
+                                <input required name='birthday' type="date" class="form-control border-0 bg-light px-4" placeholder="Date de Naissance" style="height: 55px;">
                             </div>
 
                             <div class="col-md-4">
                                 <label for="">Profession <span style="color:red;">*</span></label>
-                                <input name='profession' type="text" class="form-control border-0 bg-light px-4" placeholder="Adresse e-mail" style="height: 55px;">
+                                <input required name='profession' type="text" class="form-control border-0 bg-light px-4" placeholder="profession" style="height: 55px;">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-4">
                                 <label for="">Segment <span style="color:red;">*</span></label>
-                                <select name="segment" class="form-select" aria-label="Default select example">
+                                <select required name="segment" class="form-select" >
                                     <option selected>Choisir votre segment</option>
                                     <option value="1">Segment 1 : 12.500 FCFA</option>
                                     <option value="2">Segment 2 : 15.000 FCFA</option>
@@ -100,19 +99,19 @@
 
                             <div class="col-md-4">
                                 <label for="">Nom et Prenom <span style="color:red;">*</span></label>
-                                <input name='toContactName' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
+                                <input required name='toContactName' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">Numero de telephone<span style="color:red;">*</span></label>
-                                <input name='toContactPhone' type="number" class="form-control border-0 bg-light px-4" style="height: 55px;">
+                                <input required name='toContactPhone' type="number" class="form-control border-0 bg-light px-4" style="height: 55px;">
                             </div>
                             <div class="col-md-4">
                                 <label for="">Addresse <span style="color:red;">*</span></label>
-                                <input name='toContactAdress' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
+                                <input required name='toContactAdress' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
                             </div>
 
                             <div class="offset-3 col-6">
-                                <button class="btn btn-primary w-100 py-3" type="submit" >Soumettre</button>
+                                <button name="btn_submit" class="btn btn-primary w-100 py-3" type="submit" >Soumettre</button>
                             </div>
                         </div>
                     </form>

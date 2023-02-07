@@ -14,17 +14,16 @@ class Card extends Model
         'surname',
         'lastname',
         'city',
-        'residentialAdress',
-        'emailAdress',
+        'residentialAddress',
         'phone1',
         'phone2',
         'cniNumber',
+        'lieuCreationCni',
         'birthday',
-        'passeport',
         'profession',
         'toContactName',
         'toContactPhone',
-        'toContactAdress',
+        'toContactAddress',
         'segment'
     ];
 }
