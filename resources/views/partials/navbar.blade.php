@@ -11,6 +11,6 @@
             <a href="#about" class="nav-item nav-link">Qui sommes-nous</a>            
             <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
         </div>
-        <a href="form" class="btn btn-primary py-2 px-4 ms-3">Acheter Ma Carte</a>
+        <a href="{{ route('form') }}" class="btn btn-primary py-2 px-4 ms-3">Acheter Ma Carte</a>
     </div>
 </nav>

@@ -12,11 +12,9 @@ class CardController extends Controller
         return view('home');
     }
 
-    public function show($segment)
+    public function show()
     {
-        return view('form', [
-            'segment' => $segment 
-        ]);
+        return view('form');
     }
 
 
@@ -41,7 +39,6 @@ class CardController extends Controller
         ]);
 
         return back()->with('success', 'Votre e-mail a bien été ajouté à notre newsletter');
-
     }
 
 }
