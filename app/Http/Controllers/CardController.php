@@ -31,8 +31,6 @@ class CardController extends Controller
     public function saveAndSendMails(Request $request)
     {
 
-        // dd('yy');
-
         $request->validate([ 
             'email' => ['required','email'],
             'surname' => ['required'],
@@ -52,7 +50,7 @@ class CardController extends Controller
 
         ]);
 
-        dd("test");
+        dd("pass validation");
 
         //on crée un enregistrement de notre Carte en BD
         Card::create([

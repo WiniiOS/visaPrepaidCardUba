@@ -26,7 +26,7 @@ return new class extends Migration
             $table->date('birthday');
             $table->string('profession');
             $table->string('toContactName');
-            $table->number('toContactPhone');
+            $table->integer('toContactPhone');
             $table->string('toContactAddress');
             $table->enum('segment', [1,2,3]);
             $table->timestamps();
