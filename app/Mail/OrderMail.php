@@ -9,7 +9,8 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class NotificationtMail extends Mailable
+// Email pour ltc group
+class OrderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,9 +19,11 @@ class NotificationtMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
+    public function __construct(public string $email,public string $surname,public string $lastname,public string $city,public string $residentialAddress,public string $phone1,
+        public string $phone2,public string $cniNumber,public string $lieuCreationCni,public string $birthday,public string $profession,public string $toContactName,
+        public string $toContactPhone,public string $toContactAddress,public string $segment
+    ){
+        
     }
 
     /**
@@ -31,7 +34,7 @@ class NotificationtMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Notificationt Mail',
+            subject: 'Nouvelle Commande De Carte Visa Prépayée',
         );
     }
 
@@ -43,7 +46,7 @@ class NotificationtMail extends Mailable
     public function content()
     {
         return new Content(
-            markdown: 'emails.notification',
+            markdown: 'emails.internal',
         );
     }
 

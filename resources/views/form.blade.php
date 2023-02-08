@@ -29,9 +29,16 @@
                 <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
                 @if($errors->any())
                     @foreach($errors->all() as $error)
-                        <div class='text-red-500'>{{ $error }}</div>
+                        <div class="alert alert-danger" role="alert"> {{ $error }} </div>
                     @endforeach
                 @endif
+
+                @if (session('saveAndSendMail'))
+                    <div class="alert alert-success">
+                        {{ session('saveAndSendMail') }}
+                    </div>
+                @endif
+                
                 <form action="{{ route('subscribeForm') }}" method="POST">
                         @csrf
                         <div class="row g-3">
@@ -111,7 +118,7 @@
                             </div>
 
                             <div class="offset-3 col-6">
-                                <button name="btn_submit" class="btn btn-primary w-100 py-3" type="submit" >Soumettre</button>
+                                <button name="btn_submit" class="btn btn-primary w-100 py-3" type="submit" >Commander</button>
                             </div>
                         </div>
                     </form>

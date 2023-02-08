@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('phone1');
             $table->integer('phone2');
             $table->integer('cniNumber');
+            $table->text('lieuCreationCni');
             $table->date('birthday');
             $table->string('profession');
             $table->string('toContactName');

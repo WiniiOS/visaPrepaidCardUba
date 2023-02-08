@@ -1,12 +1,16 @@
 <x-mail::message>
 # Introduction
 
-The body of your message.
+Merçi cher client d'avoir souscrit 
 
-<x-mail::button :url="''">
-Button Text
+Votre commande a été éffectuée avec success.
+
+Nous vous contacterons bientot pour la livraison.
+
+<x-mail::button :url="'https://ltcgroup.net'">
+Visiter LTC Group
 </x-mail::button>
 
-Thanks,<br>
+Merçi,<br>
 {{ config('app.name') }}
 </x-mail::message>

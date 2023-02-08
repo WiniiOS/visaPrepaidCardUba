@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Card;
+use App\Mail\OrderMail;
 use Illuminate\Http\Request;
+use App\Mail\NotificationMail;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactRequest;
 
 class CardController extends Controller
@@ -17,16 +20,6 @@ class CardController extends Controller
     {
         return view('form');
     }
-
-
-    // public function sendmail(ContactRequest $request)
-    // {
- 
-    //     Mail::to('contact@ltcgroup.net')->send(new ContactMail($request->name,$request->email,$request->message));
-
-    //     return back()->with('successMail', 'Votre Mail a bien été envoyé');
-
-    // }
 
     public function saveAndSendMails(Request $request)
     {
@@ -50,8 +43,6 @@ class CardController extends Controller
 
         ]);
 
-        dd("pass validation");
-
         //on crée un enregistrement de notre Carte en BD
         Card::create([
             'email' => $request->email,
@@ -59,7 +50,6 @@ class CardController extends Controller
             'lastname' => $request->lastname,
             'city' => $request->city,
             'residentialAddress' => $request->residentialAddress,
-            'emailAddress' => $request->emailAddress,
             'phone1' => $request->phone1,
             'phone2' => $request->phone2,
             'cniNumber' => $request->cniNumber,
@@ -68,16 +58,23 @@ class CardController extends Controller
             'profession' => $request->profession,
             'toContactName' => $request->toContactName,
             'toContactPhone' => $request->toContactPhone,
-            'toContactAdress' => $request->toContactAdress,
+            'toContactAddress' => $request->toContactAddress,
             'segment' => $request->segment
         ]);
 
-        // on envoi un mail to ltc & client
-        //     Mail::to('contact@ltcgroup.net')->send(new ContactMail($request->name,$request->email,$request->message));
+        $client_email = $request->email;
+        // on envoi un mail to ltc (Nouvelle commande)
+        Mail::to('contact@ltcgroup.net')->send(new OrderMail(
+            $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
+            $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
+            $request->toContactPhone,$request->toContactAddress,$request->segment
+        ));
 
+        // on envoi un mail to ltc & client (Nouvelle commande)
+        Mail::to($client_email)->send(new NotificationMail($request->name,$request->email,$request->message));
 
+        return back()->with('saveAndSendMail', 'Votre enregistrement a bien été envoyé');
 
-        return back()->with('success', 'Votre enregistrement a bien été envoyé');
     }
 
 }
