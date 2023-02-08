@@ -18,9 +18,8 @@ class ContactMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(public string $name,public string $email,public string $object,public string $message)
     {
-        //
     }
 
     /**
@@ -31,7 +30,7 @@ class ContactMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Contact Mail',
+            subject: 'Formulaire de Contact Visa LTC Group',
         );
     }
 

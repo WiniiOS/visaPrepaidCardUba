@@ -1,12 +1,15 @@
 <x-mail::message>
-# Introduction
+# Nom Client : {{ $name }}
+# Email : {{ $email }}
+# Objet : {{ $object }}
 
-The body of your message.
 
-<x-mail::button :url="''">
-Button Text
+{{ $message }}
+
+<x-mail::button :url="'https://www.ltcgroup.net'">
+Visitez nous
 </x-mail::button>
 
-Thanks,<br>
+Merci,<br>
 {{ config('app.name') }}
 </x-mail::message>

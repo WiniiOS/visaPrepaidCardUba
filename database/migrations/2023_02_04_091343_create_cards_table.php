@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('residentialAddress');
             $table->integer('phone1');
-            $table->integer('phone2');
+            $table->integer('phone2')->nullable();
             $table->integer('cniNumber');
             $table->text('lieuCreationCni');
             $table->date('birthday');

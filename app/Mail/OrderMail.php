@@ -20,7 +20,7 @@ class OrderMail extends Mailable
      * @return void
      */
     public function __construct(public string $email,public string $surname,public string $lastname,public string $city,public string $residentialAddress,public string $phone1,
-        public string $phone2,public string $cniNumber,public string $lieuCreationCni,public string $birthday,public string $profession,public string $toContactName,
+        public $phone2,public string $cniNumber,public string $lieuCreationCni,public string $birthday,public string $profession,public string $toContactName,
         public string $toContactPhone,public string $toContactAddress,public string $segment
     ){
         
