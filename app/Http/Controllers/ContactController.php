@@ -14,7 +14,7 @@ class ContactController extends Controller
 
     public function sendmail(Request $request)
     {
-        Mail::to('contact@ltcgroup.net')->send(new ContactMail($request->name,$request->email,$request->object,$request->message));
+        Mail::to('contact@ltcprepaidcard.com')->send(new ContactMail($request->name,$request->email,$request->object,$request->message));
 
         return back()->with('successMail', 'Votre Mail a bien été envoyé');
 
