@@ -1,6 +1,4 @@
 <x-mail::message>
-# Introduction
-
 Merçi cher client d'avoir souscrit 
 
 Votre commande a été éffectuée avec success.

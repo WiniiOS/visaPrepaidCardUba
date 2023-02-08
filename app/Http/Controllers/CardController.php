@@ -49,8 +49,7 @@ class CardController extends Controller
 
         ]);
 
-        //on crée un enregistrement de notre Carte en BD
-        Card::create([
+        $data = [
             'email' => $request->email,
             'surname' => $request->surname,
             'lastname' => $request->lastname,
@@ -66,13 +65,27 @@ class CardController extends Controller
             'toContactPhone' => $request->toContactPhone,
             'toContactAddress' => $request->toContactAddress,
             'segment' => $request->segment
-        ]);
+        ];
 
-        $this->saveInFirebase();
+        // Save in mySQL
+        Card::create($data);
+
+        // Save in firebase
+        $this->saveInFirebase($data);
 
         $client_email = $request->email;
+        $city = $request->city;
+
+        $ltc_mail = 'yde@ltcprepaidcard.com' ;
+
+        if($city == 'dla'){
+            $ltc_mail = 'dla@ltcprepaidcard.com' ;
+        }elseif ($city == 'yde') {
+            $ltc_mail = 'yde@ltcprepaidcard.com';
+        }
+
         // on envoi un mail to ltc (Nouvelle commande)
-        Mail::to('contact@ltcgroup.net')->send(new OrderMail(
+        Mail::to($ltc_mail)->send(new OrderMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
             $request->toContactPhone,$request->toContactAddress,$request->segment
@@ -85,15 +98,10 @@ class CardController extends Controller
 
     }
 
-    public function saveInFirebase(){
+    public function saveInFirebase($data){
         $database = app('firebase.database');
         $cards = $database->getReference('cards')
-        ->set([
-            'name' => 'franck',
-            'email' => 'fr@gmail.com',
-            'phone' => 'fdgfg',
-            'phone2' => "reter"
-        ]);
+        ->set($data);
     }
 
 }
