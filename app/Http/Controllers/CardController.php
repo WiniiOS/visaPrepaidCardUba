@@ -9,8 +9,14 @@ use App\Mail\NotificationMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactRequest;
 
+// Firebase
+use Kreait\Firebase;
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\ServiceAccount;
+
 class CardController extends Controller
 {
+
     public function index()
     {
         return view('home');
@@ -62,6 +68,8 @@ class CardController extends Controller
             'segment' => $request->segment
         ]);
 
+        $this->saveInFirebase();
+
         $client_email = $request->email;
         // on envoi un mail to ltc (Nouvelle commande)
         Mail::to('contact@ltcgroup.net')->send(new OrderMail(
@@ -75,6 +83,17 @@ class CardController extends Controller
 
         return back()->with('saveAndSendMail', 'Votre enregistrement a bien été envoyé');
 
+    }
+
+    public function saveInFirebase(){
+        $database = app('firebase.database');
+        $cards = $database->getReference('cards')
+        ->set([
+            'name' => 'franck',
+            'email' => 'fr@gmail.com',
+            'phone' => 'fdgfg',
+            'phone2' => "reter"
+        ]);
     }
 
 }

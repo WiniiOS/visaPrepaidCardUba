@@ -30,5 +30,16 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    
+    'firebase' => [
+        'apiKey' => "AIzaSyAvGm9AktBJeeOekXPt3Jf1obtMVXX0NAE",
+        'authDomain'=> "ltc-group.firebaseapp.com",
+        'databaseURL'=> "https://ltc-group-default-rtdb.europe-west1.firebasedatabase.app",
+        'projectId'=> "ltc-group",
+        'storageBucket'=> "ltc-group.appspot.com",
+        'messagingSenderId'=>"688552737027",
+        'appId'=> "1:688552737027:web:4f994581c2e554cc129136",
+        'measurementId'=> "G-34NXGTMZD8"
+    ],
 
 ];
