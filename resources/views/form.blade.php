@@ -54,10 +54,7 @@
                                 <label for="">Middle Name/Prenom <span style="color:red;">*</span></label>
                                 <input required name='lastname' type="text" class="form-control border-0 bg-light px-4" style="height: 55px;">
                             </div>
-                            <div class="col-md-4">
-                                <label for="">City/Ville <span style="color:red;">*</span></label>
-                                <input required name='city' type="text" class="form-control border-0 bg-light px-4" style="height: 55px;">
-                            </div>
+                            
                             <div class="col-md-4">
                                 <label for="">Residential Address/Quartier <span style="color:red;">*</span></label>
                                 <input required name='residentialAddress' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
@@ -93,8 +90,17 @@
                                 <select required name="segment" class="form-select" >
                                     <option selected>Choisir votre segment</option>
                                     <option value="1">Segment 1 : 12.500 FCFA</option>
-                                    <option value="2">Segment 2 : 15.000 FCFA</option>
-                                    <option value="3">Segment 3 : 18.000 FCFA</option>
+                                    <option value="2">Segment 2 : 17.500 FCFA</option>
+                                    <option value="3">Segment 3 : 30.000 FCFA</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <label for="">City/Ville <span style="color:red;">*</span></label>
+                                <select required name="city" class="form-select" >
+                                    <option selected value="yde">Yaoundé</option>
+                                    <option value="dla">Douala</option>
+                                    <option value="autres">Autres</option>
                                 </select>
                             </div>
 

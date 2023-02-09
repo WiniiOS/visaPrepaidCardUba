@@ -80,9 +80,12 @@ class CardController extends Controller
 
         if($city == 'dla'){
             $ltc_mail = 'dla@ltcprepaidcard.com' ;
-        }elseif ($city == 'yde') {
+        } elseif ($city == 'yde') {
+            $ltc_mail = 'yde@ltcprepaidcard.com';
+        } else {
             $ltc_mail = 'yde@ltcprepaidcard.com';
         }
+
 
         // on envoi un mail to ltc (Nouvelle commande)
         Mail::to($ltc_mail)->send(new OrderMail(
