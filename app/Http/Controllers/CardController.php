@@ -97,7 +97,10 @@ class CardController extends Controller
         // on envoi un mail to ltc & client (Nouvelle commande)
         Mail::to($client_email)->send(new NotificationMail($request->name,$request->email,$request->message));
 
-        return back()->with('saveAndSendMail', 'Votre enregistrement a bien été envoyé');
+        // on redirige vers whatsapp
+        return redirect('https://wa.me/237673209375');
+
+        // return back()->with('saveAndSendMail', 'Votre enregistrement a bien été envoyé');
 
     }
 

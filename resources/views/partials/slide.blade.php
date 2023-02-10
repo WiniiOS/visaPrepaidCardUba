@@ -4,10 +4,9 @@
             <img class="w-100" src="{{ url('imports/img/carousel-1.png') }}" alt="Image">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Simple et rapide</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Achetez Votre Carte Pré-payé Visa UBA</h1>
-                    <!-- <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> -->
-                    <a href="#cardGrid" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Acheter</a>
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ __("visa.Slide1Title") }}</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ __("visa.Slide1Description") }}</h1>
+                    <a href="#cardGrid" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">{{ __("visa.SlideButton1") }}</a>
                 </div>
             </div>
         </div>
@@ -16,9 +15,9 @@
             <img class="w-100" src="{{ url('imports/img/carousel-2.png') }}" alt="Image">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Grille tarifaire & Simplicité</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Recharger Votre Visa Prépayée</h1>
-                    <a href="#recharge" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Recharger</a>
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ __("visa.Slide2Title") }}</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ __("visa.Slide2Description") }}</h1>
+                    <a href="#recharge" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">{{ __("visa.SlideButton2") }}</a>
                 </div>
             </div>
         </div>
@@ -27,9 +26,9 @@
             <img class="w-100" src="{{ url('imports/img/carousel-3.png') }}" alt="Image">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Sécurité & Confidentialité</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Bloquez votre carte prépayée UBA</h1>
-                    <a href="#bloquage" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Bloquer</a>
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ __("visa.Slide3Title") }}</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ __("visa.Slide3Description") }}</h1>
+                    <a href="#bloquage" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">{{ __("visa.SlideButton3") }}</a>
                 </div>
             </div>
         </div>
