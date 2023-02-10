@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('residentialAddress');
             $table->integer('phone1');
             $table->integer('phone2')->nullable();
-            $table->integer('cniNumber');
+            $table->string('cniNumber');
             $table->text('lieuCreationCni');
             $table->date('birthday');
             $table->string('profession');

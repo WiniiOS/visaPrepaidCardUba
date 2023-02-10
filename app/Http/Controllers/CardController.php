@@ -27,6 +27,11 @@ class CardController extends Controller
         return view('form');
     }
 
+    public function showMessage()
+    {
+        return view('message');
+    }
+
     public function saveAndSendMails(Request $request)
     {
 
@@ -68,7 +73,7 @@ class CardController extends Controller
         ];
 
         // Save in mySQL
-        Card::create($data);
+        // Card::create($data);
 
         // Save in firebase
         $this->saveInFirebase($data);
@@ -95,18 +100,20 @@ class CardController extends Controller
         ));
 
         // on envoi un mail to ltc & client (Nouvelle commande)
-        Mail::to($client_email)->send(new NotificationMail($request->name,$request->email,$request->message));
+        Mail::to($client_email)->send(new NotificationMail(
+            $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
+            $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
+            $request->toContactPhone,$request->toContactAddress,$request->segment));
 
         // on redirige vers whatsapp
-        return redirect('https://wa.me/237673209375');
-
-        // return back()->with('saveAndSendMail', 'Votre enregistrement a bien été envoyé');
+        return redirect('message');
 
     }
 
     public function saveInFirebase($data){
         $database = app('firebase.database');
-        $cards = $database->getReference('cards')
+        $ref = 'cards/'.$data['phone1'].$data['surname'];
+        $cards = $database->getReference($ref)
         ->set($data);
     }
 

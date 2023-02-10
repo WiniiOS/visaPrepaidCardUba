@@ -1,12 +1,37 @@
 <x-mail::message>
-Merçi cher client d'avoir souscrit 
+Cher Client Merçi D'avoir Souscrit !
 
-Votre commande a été éffectuée avec success.
+Votre commande a été envoyée avec success.
 
-Nous vous contacterons bientot pour la livraison.
+Nous vous contacterons bientot pour éffectuer votre livraison.
 
-<x-mail::button :url="'https://ltcgroup.net'">
-Visiter LTC Group
+# Veillez verifier que les informations ci-dessous sont correctes
+# Check if your data are correctly saved
+
+
+# Segment : Segment {{ $segment }}
+
+# Nom Complet du Client : {{ $surname }} {{ $lastname }}
+# Addresse Email : {{ $email }}
+# Ville : {{ $city }}
+# Quartier : {{ $residentialAddress }}
+# Telephone : {{ $phone1 }}
+# Telephone 2 (Optionnel) : {{ $phone2 }}
+# Numéro CNI : {{ $cniNumber }}
+# Lieu de délivrance de la CNI : {{ $lieuCreationCni }}
+# Date de naissance : {{ $birthday }}
+# Profession : {{ $profession }}
+
+# Personne à contacter en cas de besoin
+
+# Nom : {{ $toContactName }}
+# Telephone : {{ $toContactPhone }}
+# Addresse : {{ $toContactAddress }}
+
+EN CAS D'ERREUR CONTACTEZ NOUS 
+
+<x-mail::button :url="'https://wa.me/237673209375'">
+CONTACT
 </x-mail::button>
 
 Merçi,<br>

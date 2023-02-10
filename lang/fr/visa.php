@@ -160,7 +160,13 @@ return [
     'Contact3' => 'Addresse',
     'ContactButton' => 'Envoyer',
 
-    // Form page
+    // Enrolment
+    'EnrolmentLabel' => 'Enrollement',
+    'EnrolmentTitle' => "FORMULAIRE D'ENREGISTREMENT POUR L'OBTENTION D'UNE CARTE VISA",
+    'EnrolmentBloc' => "Personne a contacter en cas de besoin",
+    'EnrolmentBtn' => "Commander",
+
+    
 
 
 ];

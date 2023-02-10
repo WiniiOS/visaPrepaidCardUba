@@ -8,6 +8,9 @@ Route::get('/', [CardController::class, 'index'])->name('home');
 Route::get('form', [CardController::class, 'show'])->name('form');
 Route::get('contact', [ContactController::class, 'showContact'])->name('contact');
 
+Route::get('message', [CardController::class, 'showMessage'])->name('message');
+
+
 Route::post('subscribeForm', [CardController::class, 'saveAndSendMails'])->name('subscribeForm');
 Route::post('contact', [ContactController::class, 'sendmail'])->name('sendmail');
 

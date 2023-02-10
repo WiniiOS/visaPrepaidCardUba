@@ -155,5 +155,11 @@ return [
     'Contact3' => 'Address',
     'ContactButton' => 'Send',
 
+    // Enrolment
+    'EnrolmentLabel' => 'Enrolment',
+    'EnrolmentTitle' => 'REGISTRATION FORM FOR A VISA CARD',
+    'EnrolmentBloc' => 'Contact person in case of need',
+    'EnrolmentBtn' => "Order",
+
     
 ];
