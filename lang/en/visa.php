@@ -8,7 +8,11 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    // Meta descriptions
+    'HomePageTitle' => 'Sale and reload of UBA prepaid visa cards',
+    'FormPageTitle' => 'UBA / LTC GROUP Visa Prepaid Card Application Form',
 
+    // Bases
     'Home' => 'Home',
     'About' => 'About',
     'Services' => 'Services',

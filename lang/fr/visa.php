@@ -12,7 +12,13 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    // Meta descriptions
+    // Meta descriptions
+    'HomePageTitle' => 'Vente et recharge des cartes visa prépayée UBA',
+    'FormPageTitle' => 'Formulaire de souscription à une carte visa prépayée UBA / LTC GROUP',
 
+
+    // Bases
     'Home' => 'Accueil',
     'About' => 'A propos',
     'Services' => 'Services',

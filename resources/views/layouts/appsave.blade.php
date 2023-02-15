@@ -2,11 +2,11 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
     <head>
         <meta charset="utf-8">
-        <title>{{ __('visa.HomePageTitle') }}</title>
+        <title>{{ __('visa.FormPageTitle') }}</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="LTC Group VISA UBA" name="description">
+        <meta content="{{ __('visa.FormPageTitle') }}" name="keywords">
 
-        <meta content="{{ __('visa.HomePageTitle') }}" name="keywords">
         <!-- images réseaux -->
         <meta property="og:image" content="https://ltcprepaidcard.com/imports/img/about.png" />
         <meta property="og:title" content="LTC GROUP " />
