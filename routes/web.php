@@ -7,7 +7,6 @@ use App\Http\Controllers\ContactController;
 Route::get('/', [CardController::class, 'index'])->name('home');
 Route::get('form', [CardController::class, 'show'])->name('form');
 Route::get('contact', [ContactController::class, 'showContact'])->name('contact');
-
 Route::get('message', [CardController::class, 'showMessage'])->name('message');
 
 

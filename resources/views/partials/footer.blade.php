@@ -71,7 +71,7 @@
             <div class="row justify-content-end">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">VISALTCGROUP.COM</a>. All Rights Reserved. 
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">LTCPREPAIDCARD.COM</a>. All Rights Reserved. 
 						
 						Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">LTC GROUP</a></p>
                     </div>

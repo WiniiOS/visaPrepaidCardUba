@@ -21,6 +21,8 @@ Nous vous contacterons bientot pour éffectuer votre livraison.
 # Lieu de délivrance de la CNI : {{ $lieuCreationCni }}
 # Date de naissance : {{ $birthday }}
 # Profession : {{ $profession }}
+# Adressee_De_Livraison : {{ $delivery_address }}
+
 
 # Personne à contacter en cas de besoin
 

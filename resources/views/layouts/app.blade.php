@@ -5,8 +5,8 @@
         <title>{{ __('visa.HomePageTitle') }}</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="LTC Group VISA UBA" name="description">
-
         <meta content="{{ __('visa.HomePageTitle') }}" name="keywords">
+        <!-- <meta content="{{ __('visa.FormPageTitle') }}" name="keywords"> -->
         <!-- images réseaux -->
         <meta property="og:image" content="https://ltcprepaidcard.com/imports/img/about.png" />
         <meta property="og:title" content="LTC GROUP " />

@@ -13,6 +13,7 @@ return [
     'FormPageTitle' => 'UBA / LTC GROUP Visa Prepaid Card Application Form',
 
     // Bases
+    
     'Home' => 'Home',
     'About' => 'About',
     'Services' => 'Services',
@@ -151,6 +152,8 @@ return [
     'header2Link3' => 'Block my card',
     'header2Link4' => 'Contact us',
 
+
+    
     // Contact page
     'ContactLabel' => 'CONTACT US',
     'ContactTitle' => 'Leave us an e-mail or call us!',
@@ -158,12 +161,14 @@ return [
     'Contact2' => 'Our e-mail',
     'Contact3' => 'Address',
     'ContactButton' => 'Send',
-
+    
     // Enrolment
     'EnrolmentLabel' => 'Enrolment',
     'EnrolmentTitle' => 'REGISTRATION FORM FOR A VISA CARD',
     'EnrolmentBloc' => 'Contact person in case of need',
     'EnrolmentBtn' => "Order",
+
+
 
     
 ];

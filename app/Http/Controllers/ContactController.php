@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Mail;
 class ContactController extends Controller
 {
     public function showContact(){
-
-        return view('contact');
         
+        return view('contact');
     }
+    
 
     public function sendmail(Request $request)
     {

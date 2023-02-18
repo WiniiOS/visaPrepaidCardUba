@@ -18,7 +18,7 @@ class CardController extends Controller
 {
 
     public function index()
-    {    
+    {
         return view('home');
     }
 
@@ -51,6 +51,7 @@ class CardController extends Controller
             'toContactPhone' => [ 'required'],
             'toContactAddress' => [ 'required'],
             'segment' => [ 'required'],
+            'delivery_address' => [ 'required'],
 
         ]);
 
@@ -69,7 +70,9 @@ class CardController extends Controller
             'toContactName' => $request->toContactName,
             'toContactPhone' => $request->toContactPhone,
             'toContactAddress' => $request->toContactAddress,
-            'segment' => $request->segment
+            'segment' => $request->segment,
+            'delivery_address' => $request->delivery_address,
+
         ];
 
         // Save in mySQL
@@ -96,14 +99,14 @@ class CardController extends Controller
         Mail::to($ltc_mail)->send(new OrderMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
-            $request->toContactPhone,$request->toContactAddress,$request->segment
+            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address
         ));
 
         // on envoi un mail to ltc & client (Nouvelle commande)
         Mail::to($client_email)->send(new NotificationMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
-            $request->toContactPhone,$request->toContactAddress,$request->segment));
+            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address));
 
         // on redirige vers whatsapp
         return redirect('message');

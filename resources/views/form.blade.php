@@ -103,6 +103,11 @@
                                     <option value="autres">Autres</option>
                                 </select>
                             </div>
+                            
+                            <div class="col-md-4">
+                                <label for="">Adresse de livraison/ Delivery address<span style="color:red;">*</span></label>
+                                <input style="height: 55px;" required name='delivery_address' type="text" class="form-control border-0 bg-light px-4" >
+                            </div>
 
                             <br><br>
                             <hr class="col-md-8 offset-2">

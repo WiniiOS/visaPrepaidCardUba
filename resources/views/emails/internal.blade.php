@@ -15,6 +15,8 @@ Une nouvelle commande de carte visa prépayée a été enregistré
 # Lieu de délivrance de la CNI : {{ $lieuCreationCni }}
 # Date de naissance : {{ $birthday }}
 # Profession : {{ $profession }}
+# Adressee_De_Livraison : {{ $delivery_address }}
+
 
 # Personne à contacter en cas de besoin
 
