@@ -57,6 +57,8 @@
         <script src="{{ asset('imports/lib/owlcarousel/owl.carousel.min.js') }}"></script>
         <!-- Template Main JS File -->
         <script src="{{ asset('imports/js/main.js') }}"></script>
+        <script src="{{ asset('imports/js/app.js') }}"></script>
+
             
     </body>
 </html>

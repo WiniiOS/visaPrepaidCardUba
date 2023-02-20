@@ -52,8 +52,13 @@ class CardController extends Controller
             'toContactAddress' => [ 'required'],
             'segment' => [ 'required'],
             'delivery_address' => [ 'required'],
-
+            'hasUniqueIdNumber' => ['required'],
+            // 'hasDelivery' => ['hasDelivery']
         ]);
+
+        $uin = $request->hasUniqueIdNumber == null ? "Je n'ai pas de Numero d'Identifiant" : "J'ai déjà un Numero d'Identifiant" ;
+        $Delivery = $request->hasDelivery == null ? "Je ne souhaite pas etre livrée je passerai au bureau" : "Je souhaite etre livrée";
+
 
         $data = [
             'email' => $request->email,
@@ -72,8 +77,12 @@ class CardController extends Controller
             'toContactAddress' => $request->toContactAddress,
             'segment' => $request->segment,
             'delivery_address' => $request->delivery_address,
+            'hasUniqueIdNumber' => $uin,
+            'hasDelivery' => $Delivery
 
         ];
+
+        // dd($data); hasDelivery / soit : on // null
 
         // Save in mySQL
         // Card::create($data);
@@ -99,14 +108,14 @@ class CardController extends Controller
         Mail::to($ltc_mail)->send(new OrderMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
-            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address
+            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address,$uin,$Delivery
         ));
 
         // on envoi un mail to ltc & client (Nouvelle commande)
         Mail::to($client_email)->send(new NotificationMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
-            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address));
+            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address,$uin,$Delivery));
 
         // on redirige vers whatsapp
         return redirect('message');

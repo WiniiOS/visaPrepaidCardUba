@@ -22,7 +22,8 @@ Nous vous contacterons bientot pour éffectuer votre livraison.
 # Date de naissance : {{ $birthday }}
 # Profession : {{ $profession }}
 # Adressee_De_Livraison : {{ $delivery_address }}
-
+# Livraison : {{ $Delivery }}
+# NuméroIdentifiantUnique : {{ $uin }}
 
 # Personne à contacter en cas de besoin
 
