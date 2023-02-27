@@ -3,6 +3,8 @@ Bonjour LTC GROUP
 
 Une nouvelle commande de carte visa prépayée a été enregistré
 
+#Montal_Total : {{ $total_order }}
+
 #Segment : Segment {{ $segment }}
 
 # Nom Complet du Client : {{ $surname }} {{ $lastname }}
@@ -16,9 +18,10 @@ Une nouvelle commande de carte visa prépayée a été enregistré
 # Date de naissance : {{ $birthday }}
 # Profession : {{ $profession }}
 # Adressee_De_Livraison : {{ $delivery_address }}
-# Livraison : {{ $Delivery }}
-# NuméroIdentifiantUnique : {{ $uin }}
 
+
+# Souhaitez-vous etre livrée ? : {{ $delivery }}
+# Souscrivez-vous au Numero ID Unique : {{ $uin }}
 
 # Personne à contacter en cas de besoin
 

@@ -8,6 +8,7 @@ Nous vous contacterons bientot pour éffectuer votre livraison.
 # Veillez verifier que les informations ci-dessous sont correctes
 # Check if your data are correctly saved
 
+#Montal_Total : {{ $total_order }}
 
 # Segment : Segment {{ $segment }}
 
@@ -22,8 +23,9 @@ Nous vous contacterons bientot pour éffectuer votre livraison.
 # Date de naissance : {{ $birthday }}
 # Profession : {{ $profession }}
 # Adressee_De_Livraison : {{ $delivery_address }}
-# Livraison : {{ $Delivery }}
-# NuméroIdentifiantUnique : {{ $uin }}
+
+# Souhaitez-vous etre livrée ? : {{ $delivery }}
+# Souscrivez-vous au Numero ID Unique : {{ $uin }}
 
 # Personne à contacter en cas de besoin
 

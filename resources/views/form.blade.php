@@ -50,14 +50,42 @@
                         <div class="row">
                             <div class="col-md-12 offset-1">
                                 <!--  -->
-                                    <div class="form-check form-switch ">
-                                        <input id="niu" name="hasUniqueIdNumber" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">Avez-vous déjà un Numéro d'Identifiant Unique ? (3000 FCFA) <a data-bs-toggle="modal" data-bs-target="#cardModal" data-bs-whatever="@mdo" href="">En savoir plus</a> </label>
-                                    </div><br>
-                                    <div class="form-check form-switch ">
+
+                                    <fieldset class="row mb-3">
+                                        <span><legend class="col-form-label col-sm-8 pt-0">Souhaitez vous que nous créons votre Numéro Identifiant Unique ? (3000 FCFA)  <a data-bs-toggle="modal" data-bs-target="#cardModal" data-bs-whatever="@mdo" href=""> En savoir plus </a> </legend></span>
+                                        
+                                        <div class="col-sm-10">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="hasUniqueIdNumber" id="niu" value="oui">
+                                                <label class="form-check-label" for="gridRadios1">Oui</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="hasUniqueIdNumber" id="niu2" value="non">
+                                                <label class="form-check-label" for="gridRadios2">Non</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="row mb-3">
+                                        <legend class="col-form-label col-sm-6 pt-0">Souhaitez vous etre livré ? (1000 FCFA) </legend>
+                                        
+                                        <div class="col-sm-10">
+                                            <div class="form-check">
+                                                <input id="livraison" class="form-check-input" type="radio" name="hasDelivery" value="oui" >
+                                                <label class="form-check-label" for="gridRadios1">Oui</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input  id="livraison2" class="form-check-input" type="radio" name="hasDelivery" value="non">
+                                                <label class="form-check-label" for="gridRadios2">Non</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    
+                                    <!-- <div class="form-check form-switch ">
                                         <input id="livraison" name="hasDelivery" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
                                         <label class="form-check-label" for="flexSwitchCheckDefault2">Souhaitez vous etre livré ? (1000 FCFA) </label>
-                                    </div><br>
+                                    </div><br> -->
 
                                     <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
