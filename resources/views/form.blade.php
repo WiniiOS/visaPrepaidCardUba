@@ -10,10 +10,6 @@
     </div>
     <!-- Navbar & Carousel End -->
 
-
-
-    
-
     <!-- Contact Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -42,15 +38,13 @@
                         {{ session('saveAndSendMail') }}
                     </div>
                 @endif
-                <br><br>
-
+                
                 <form action="{{ route('subscribeForm') }}" method="POST">
                         @csrf
-
+                        
                         <div class="row">
                             <div class="col-md-12 offset-1">
                                 <!--  -->
-
                                     <fieldset class="row mb-3">
                                         <span><legend class="col-form-label col-sm-8 pt-0">Souhaitez vous que nous créons votre Numéro Identifiant Unique ? (3000 FCFA)  <a data-bs-toggle="modal" data-bs-target="#cardModal" data-bs-whatever="@mdo" href=""> En savoir plus </a> </legend></span>
                                         
@@ -79,13 +73,7 @@
                                                 <label class="form-check-label" for="gridRadios2">Non</label>
                                             </div>
                                         </div>
-                                    </fieldset>
-
-                                    
-                                    <!-- <div class="form-check form-switch ">
-                                        <input id="livraison" name="hasDelivery" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault2">Souhaitez vous etre livré ? (1000 FCFA) </label>
-                                    </div><br> -->
+                                    </fieldset><br>
 
                                     <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -148,7 +136,7 @@
                             </div>
                         
                         </div>
-
+                        
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <label for="">E-mail <span style="color:red;">*</span></label>
@@ -193,7 +181,7 @@
                                 <label for="">Occupation/ Profession <span style="color:red;">*</span></label>
                                 <input required name='profession' type="text" class="form-control border-0 bg-light px-4" placeholder="profession" style="height: 55px;">
                             </div>
-                          
+                            
                             <div class="col-md-4">
                                 <label for="">City/ Ville <span style="color:red;">*</span></label>
                                 <select id="citydelivery" required name="city" class="form-select" >
@@ -226,7 +214,7 @@
                                 <label for="">Address / Addresse <span style="color:red;">*</span></label>
                                 <input required name='toContactAddress' type="text" class="form-control border-0 bg-light px-4"  style="height: 55px;">
                             </div>
-                            
+
                             <div class="offset-3 col-6">
                                 <button name="btn_submit" class="btn btn-primary w-100 py-3" type="submit" > {{ __("visa.EnrolmentBtn") }}</button>
                             </div>
@@ -235,15 +223,12 @@
                 </div>
             </div>
 
-            </div>
 
-            
         </div>
     </div>
     <!-- Contact End -->
-
-
-    <!-- Panier -->
+    
+     <!-- Panier -->
     <div id="panier" class=" shadow-lg rounded offset-3 col-md-6 px-5 py-5 navbar fixed-bottom bg-info">
         <!-- Container wrapper -->
         <div class="container text-md-start ">

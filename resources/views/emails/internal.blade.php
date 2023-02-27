@@ -19,7 +19,6 @@ Une nouvelle commande de carte visa prépayée a été enregistré
 # Profession : {{ $profession }}
 # Adressee_De_Livraison : {{ $delivery_address }}
 
-
 # Souhaitez-vous etre livrée ? : {{ $delivery }}
 # Souscrivez-vous au Numero ID Unique : {{ $uin }}
 

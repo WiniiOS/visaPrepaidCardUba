@@ -147,7 +147,6 @@ class CardController extends Controller
 
         // on redirige vers whatsapp
         return redirect('message');
-
     }
 
     public function saveInFirebase($data){
