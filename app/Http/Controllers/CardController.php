@@ -43,7 +43,7 @@ class CardController extends Controller
             'residentialAddress' => ['required'],
             'phone1' => ['required'],
             'phone2' => ['nullable'],
-            'cniNumber' => [ 'required'],
+            'cniNumber' => [ 'required','min:10'],
             'lieuCreationCni' => [ 'required'],
             'birthday' => [ 'required'],
             'profession' => [ 'required'],
@@ -51,7 +51,7 @@ class CardController extends Controller
             'toContactPhone' => [ 'required'],
             'toContactAddress' => [ 'required'],
             'segment' => [ 'required'],
-            'delivery_address' => [ 'required'],
+            'delivery_address' => [ 'nullable'],
             'hasUniqueIdNumber' => ['required'],
             'hasDelivery' => ['required']
         ]);
@@ -60,6 +60,7 @@ class CardController extends Controller
         $delivery = $request->hasDelivery == 'oui' ? "Oui - Frais : 1000 si vous etes à Yaoundé ou Douala et 2000 ailleurs" : "Non - Je viendrai récupérer personnellement";
         $city = $request->city;
         $segment = $request->segment;
+
 
         $total_order = 0;
         $deliveryAmount = 0;
@@ -112,7 +113,10 @@ class CardController extends Controller
             'delivery_address' => $request->delivery_address,
             'hasUniqueIdNumber' => $uin,
             'hasDelivery' => $delivery,
-            'total_order' => $total_order
+            'total_order' => $total_order,
+            'deliveryAmount' => $deliveryAmount,
+            'niuAmount' => $niuAmount,
+            'segmentAmount' => $segmentAmount
         ];
 
         // Save in firebase
@@ -136,16 +140,16 @@ class CardController extends Controller
         Mail::to($ltc_mail)->send(new OrderMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
-            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address,$uin,$delivery,$total_order
+            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address,$uin,$delivery,$total_order,$deliveryAmount,$niuAmount,$segmentAmount
         ));
 
         // on envoi un mail to ltc & client (Nouvelle commande)
         Mail::to($client_email)->send(new NotificationMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
-            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address,$uin,$delivery,$total_order));
-
-        // on redirige vers whatsapp
+            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address,$uin,$delivery,$total_order,$deliveryAmount,$niuAmount,$segmentAmount));
+        
+            // on redirige vers whatsapp
         return redirect('message');
     }
 

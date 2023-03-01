@@ -17,7 +17,6 @@ return [
     'HomePageTitle' => 'Vente et recharge des cartes visa prépayée UBA',
     'FormPageTitle' => 'Formulaire de souscription à une carte visa prépayée UBA / LTC GROUP',
 
-
     // Bases
 
     'Home' => 'Accueil',
@@ -172,5 +171,38 @@ return [
     'EnrolmentTitle' => "FORMULAIRE D'ENREGISTREMENT POUR L'OBTENTION D'UNE CARTE VISA",
     'EnrolmentBloc' => "Personne a contacter en cas de besoin",
     'EnrolmentBtn' => "Commander",
+    
+    'EnQ1' => "Avez-vous déjà un numéro d'identifiant unique ? (Frais: 3000 FCFA)",
+    'EnQ1Button' => "En savoir plus",
+    'Check11' => 'Oui',
+    'Check12' => 'Non',
+    'EnQ2' => "Souhaitez vous etre livré ?",
+    'Check21' => 'Oui',
+    'Check22' => 'Non, Je viendrai récuperer personellement',
+    'SegTitle' => 'Choisir un segment',
 
-];
+    // More content
+    'MoreTitle' => "VOICI POURQUOI VOUS DEVEZ ABSOLUMENT AVOIR UNE ATTESTATION D'IMMATRICULATION FISCAL( NUMÉRO D'IDENTIFIANT UNIQUE OU NUMÉRO DE Contribuable OU CARTE CONTRIBUABLE )",
+    'MP1' => "Il est important de rappelé que des poursuites pénales seront engagées à l'encontre de ceux qui font dans la fraude fiscale et les sanctions donnent lieu aux payements d'amendes allant d'un montant de 100000 à 1000000 FCFA",
+    'MP2' => "Tout usager devra être détenteur de ce numéro contribuable pour les procédures d'immatriculation foncière et d’agrément aux professions réglementées. selon une source de la DGI ( la direction générale des Impôts), il est question de mieux connaitre la population fiscale afin de s'assurer que celle-ci est en conformité avec la loi fiscale, mais aussi d’améliorer le civisme fiscal.",
+    'MH2' => "POUR TOUTES PROCÉDURES, IL VOUS SERA DÉSORMAIS EXIGÉ UN IDENTIFIANT UNIQUE MATÉRIALISÉ PAR UNE ATTESTATION D'IMMATRICULATION FISCALE.",
+    'MP3' => "ALORS A QUOI VA VRAIMENT VOUS SERVIR D'ÊTRE EN POSSESSION DE CETTE ATTESTATION D'IMMATRICULATION?",
+    'MList1' => "1-TOUCHER VOTRE SALAIRE A LA BANQUE ",
+    'MList2' => "2-ACCÉDER A VOTRE COMPTE BANCAIRE ",
+    'MList3' => "3- EFFECTUER VOS TRANSACTIONS FINANCIÈRES ",
+    'MList4' => "4- OBTENIR UN ABONNEMENT CDE, ENEO ",
+    'MList5' => "5- ACHETER UN TERRAIN PAR DEVANT NOTAIRE ",
+    'MList6' => "6-ACHETER UN VÉHICULE ",
+    'MList7' => "7-EFFECTUER DES OPÉRATIONS D'IMPORTS & EXPORTS",
+    'MList8' => "8-TOUCHER SON ÉPARGNE RETRAITE ",
+    'MList9' => "9-ETC...",
+    'MP4' => "NE PERDEZ PLUS DE TEMPS PARCE QUE LE RÉSEAU EST VRAIMENT SATURÉ ACTUELLEMENT ET LA DATE LIMITE C'EST LE 30 OCTOBRE 2020 POUR ENTRER EN POSSESSION DE VOTRE NUMÉRO.",
+    'MP5' => "Les banques m'attendent plus parce que quelques soit les transactions que vous effectuer dés Aujourd’hui ils vont vous sera demander votre identifiant et vous savez le gratuit ne dure jamais dans notre pays.",
+    'MP6' => "NOUS VOUS PROPOSONS CE SERVICES QUI VOUS FACILITE LA TACHE POUR L'OBTENTION DE VOTRE NUMÉRO IDENTIFIANT UNIQUE QUELQUES SOIT VOTRE POSITION GÉOGRAPHIQUE ET VOTRE DISPONIBILITÉ.",
+    'MButton' => 'Fermer',
+
+
+    'CartNui' => 'Numero ID Unique',
+    'CartDeliver' => 'Livraison',
+
+];  

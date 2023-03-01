@@ -46,31 +46,31 @@
                             <div class="col-md-12 offset-1">
                                 <!--  -->
                                     <fieldset class="row mb-3">
-                                        <span><legend class="col-form-label col-sm-8 pt-0">Souhaitez vous que nous créons votre Numéro Identifiant Unique ? (3000 FCFA)  <a data-bs-toggle="modal" data-bs-target="#cardModal" data-bs-whatever="@mdo" href=""> En savoir plus </a> </legend></span>
+                                        <span><legend class="col-form-label col-sm-8 pt-0"> {{ __("visa.EnQ1") }} <a data-bs-toggle="modal" data-bs-target="#cardModal" data-bs-whatever="@mdo" href=""> {{ __("visa.EnQ1Button") }} </a> </legend></span>
                                         
                                         <div class="col-sm-10">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="hasUniqueIdNumber" id="niu" value="oui">
-                                                <label class="form-check-label" for="gridRadios1">Oui</label>
+                                                <input class="form-check-input" type="radio" name="hasUniqueIdNumber" id="niu2" value="non">
+                                                <label class="form-check-label" for="gridRadios1">{{ __("visa.Check11") }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="hasUniqueIdNumber" id="niu2" value="non">
-                                                <label class="form-check-label" for="gridRadios2">Non</label>
+                                                <input class="form-check-input" type="radio" name="hasUniqueIdNumber" id="niu" value="oui">
+                                                <label class="form-check-label" for="gridRadios2">{{ __("visa.Check12") }}</label>
                                             </div>
                                         </div>
                                     </fieldset>
 
                                     <fieldset class="row mb-3">
-                                        <legend class="col-form-label col-sm-6 pt-0">Souhaitez vous etre livré ? (1000 FCFA) </legend>
+                                        <legend class="col-form-label col-sm-6 pt-0">{{ __("visa.EnQ2") }} </legend>
                                         
                                         <div class="col-sm-10">
                                             <div class="form-check">
                                                 <input id="livraison" class="form-check-input" type="radio" name="hasDelivery" value="oui" >
-                                                <label class="form-check-label" for="gridRadios1">Oui</label>
+                                                <label class="form-check-label" for="gridRadios1">{{ __("visa.Check21") }}</label>
                                             </div>
                                             <div class="form-check">
                                                 <input  id="livraison2" class="form-check-input" type="radio" name="hasDelivery" value="non">
-                                                <label class="form-check-label" for="gridRadios2">Non</label>
+                                                <label class="form-check-label" for="gridRadios2">{{ __("visa.Check22") }}</label>
                                             </div>
                                         </div>
                                     </fieldset><br>
@@ -79,42 +79,42 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Information</h1>
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Note</h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
 
                                             <div class="modal-body" style='font-size:0.9em;'>
-                                                <h3>VOICI POURQUOI VOUS DEVEZ ABSOLUMENT AVOIR UNE ATTESTATION D'IMMATRICULATION FISCAL( NUMÉRO D'IDENTIFIANT UNIQUE OU NUMÉRO DE Contribuable OU CARTE CONTRIBUABLE ).</h3>
+                                                <h3>{{ __("visa.MoreTitle") }}</h3>
                                                 <p>
-                                                Il est important de rappelé que des poursuites pénales seront engagées à l'encontre de ceux qui font dans la fraude fiscale et les sanctions donnent lieu aux payements d'amendes allant d'un montant de 100000 à 1000000 FCFA
+                                                {{ __("visa.MP1") }}
                                                 </p>
                                                 <br>
                                                 <p>
-                                                Tout usager devra être détenteur de ce numéro contribuable pour les procédures d'immatriculation foncière et d’agrément aux professions réglementées. selon une source de la DGI ( la direction générale des Impôts), il est question de mieux connaitre la population fiscale afin de s'assurer que celle-ci est en  conformité avec la loi fiscale, mais aussi d’améliorer le civisme fiscal.
+                                                {{ __("visa.MP2") }}
                                                 </p>
-                                                <h5>POUR TOUTES PROCÉDURES, IL VOUS SERA DÉSORMAIS EXIGÉ UN IDENTIFIANT UNIQUE MATÉRIALISÉ PAR UNE ATTESTATION D'IMMATRICULATION FISCALE.</h5>
+                                                <h5>{{ __("visa.MH2") }}</h5>
                                                 <br>
                                                 <p>
-                                                ALORS A QUOI VA VRAIMENT VOUS SERVIR D'ÊTRE EN POSSESSION DE CETTE  ATTESTATION D'IMMATRICULATION?
+                                                {{ __("visa.MP3") }}
                                                 </p>
                                                 <p>
-                                                1-TOUCHER VOTRE SALAIRE A LA BANQUE <br>2-ACCÉDER A VOTRE COMPTE BANCAIRE <br>3- EFFECTUER VOS TRANSACTIONS FINANCIÈRES <br>4- OBTENIR UN ABONNEMENT CDE, ENEO <br>5- ACHETER UN TERRAIN PAR DEVANT NOTAIRE
-                                                <br>6-ACHETER UN VÉHICULE <br>7-EFFECTUER DES OPÉRATIONS D'IMPORTS & EXPORTS <br>8-TOUCHER SON ÉPARGNE RETRAITE <br>9-ETC... 
+                                                {{ __("visa.MList1") }} <br>{{ __("visa.MList2") }} <br>{{ __("visa.MList3") }} <br>{{ __("visa.MList4") }} <br>{{ __("visa.MList5") }}
+                                                <br>{{ __("visa.MList6") }} <br>{{ __("visa.MList7") }} <br>{{ __("visa.MList8") }} <br>{{ __("visa.MList9") }} 
                                                 </p><br>
                                                 <p>
-                                                NE PERDEZ PLUS DE TEMPS  PARCE QUE LE RÉSEAU EST VRAIMENT SATURÉ ACTUELLEMENT ET LA DATE LIMITE C'EST LE 30 OCTOBRE 2020 POUR ENTRER EN POSSESSION DE VOTRE NUMÉRO.
+                                                {{ __("visa.MP4") }}
                                                 </p>
                                                 <br>
-                                                <p>Les banques m'attendent plus parce que quelques soit les transactions que vous effectuer dés Aujourd’hui ils vont vous sera demander votre identifiant et vous savez le gratuit ne dure jamais dans notre pays.</p>
+                                                <p>{{ __("visa.MP5") }}</p>
                                                 <p><br>
-                                                NOUS VOUS PROPOSONS CE SERVICES QUI VOUS FACILITE LA TACHE POUR L'OBTENTION DE VOTRE NUMÉRO IDENTIFIANT UNIQUE QUELQUES SOIT VOTRE POSITION GÉOGRAPHIQUE ET VOTRE DISPONIBILITÉ.
+                                                {{ __("visa.MP6") }}
                                                 </p>
                                                 
                                             </div>
                                             
 
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{ __("visa.MButton") }}</button>
                                             </div>
                                             </div>
                                         </div>
@@ -123,10 +123,10 @@
                                     <div class="col-md-4">
                                         <label for="">Segment <span style="color:red;">*</span></label>
                                         <select id="segment" required name="segment" class="form-select" >
-                                            <option selected>Choisir votre segment</option>
-                                            <option value="1">Segment 1 : 12.500 FCFA</option>
-                                            <option value="2">Segment 2 : 17.500 FCFA</option>
-                                            <option value="3">Segment 3 : 30.000 FCFA</option>
+                                            <option selected>{{ __("visa.SegTitle") }}</option>
+                                            <option value="1">Segment 1 : 12.500 FCFA (Basic)</option>
+                                            <option value="2">Segment 2 : 17.500 FCFA (Standard)</option>
+                                            <option value="3">Segment 3 : 30.000 FCFA (Premium)</option>
                                         </select>
                                     </div>
 
@@ -191,9 +191,9 @@
                                 </select>
                             </div>
                             
-                            <div class="col-md-4">
+                            <div class="col-md-4" id="deliveryDiv">
                                 <label for="">Adresse de livraison/ Delivery address<span style="color:red;">*</span></label>
-                                <input style="height: 55px;" required name='delivery_address' type="text" class="form-control border-0 bg-light px-4" >
+                                <input id="deliveryInput" style="height: 55px;" required name='delivery_address' type="text" class="form-control border-0 bg-light px-4" >
                             </div>
 
                             <br><br>
@@ -234,8 +234,8 @@
         <div class="container text-md-start ">
             <h4>🛒</h4>
             <p >Segment  : <span id="amountSeg" > 12.500 </span> FCFA</p> 
-            <p>Numero Id Unique : <span id="amountNiu"> 3000 </span> FCFA</p>
-            <p>Livraison : <span id="amountDeliver"> 1000 </span > FCFA</p>
+            <p>{{ __("visa.CartNui") }} : <span id="amountNiu"> 3000 </span> FCFA</p>
+            <p>{{ __("visa.CartDeliver") }} : <span id="amountDeliver"> 1000 </span > FCFA</p>
         </div>
         <h6>&nbsp;&nbsp;&nbsp;Total : <span id="total" >16.500 </span> FCFA</h6>
         <!-- Container wrapper -->

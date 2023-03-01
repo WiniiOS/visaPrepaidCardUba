@@ -1,5 +1,5 @@
 <x-mail::message>
-Cher Client Merçi D'avoir Souscrit !
+Cher client Merçi d'avoir souscrit !
 
 Votre commande a été envoyée avec success.
 
@@ -8,10 +8,18 @@ Nous vous contacterons bientot pour éffectuer votre livraison.
 # Veillez verifier que les informations ci-dessous sont correctes
 # Check if your data are correctly saved
 
+#Recapitulatif de la commande
 
-#Montal_Total : {{ $total_order }}
+#Livraison : {{ $deliveryAmount }}
+#Frais Numero ID Unique : {{ $niuAmount }}
+#Segment : {{ $segmentAmount }}
+#Total : {{ $total_order }}
+
 
 # Segment : Segment {{ $segment }}
+#Liste des documents à fournir (Démie carte photo/Photocopie de CNI ou Passeport valide/NIU ou Numero Contribuable/Plan de localisation)
+#Si vous avez souscrit au Segment 2 Standard ou 3 Premium, Vous devrez fournir Un justificatif de revenu(Contrat de travail,bulletin de paie,Registre commerce)
+
 
 # Nom Complet du Client : {{ $surname }} {{ $lastname }}
 # Addresse Email : {{ $email }}

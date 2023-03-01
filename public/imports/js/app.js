@@ -10,9 +10,9 @@ const deliverInput = document.getElementsByName('hasDelivery');
 const segmentInput = document.querySelector('#segment');
 const cityInput = document.querySelector('#citydelivery');
 
-// console.log('02');
+const deliveryAddressInput = document.querySelector('#deliveryDiv');
 
-// console.log(idInput);
+
 
 for(let i = 0; i < idInput.length; i++){
     idInput[i].addEventListener('change', updateID);
@@ -61,8 +61,6 @@ function updateID() {
 
 function updateDeliver() {
 
-    
-
     for(let i = 0; i < deliverInput.length; i++){
         if(deliverInput[i].checked){
             deliverInputValue = deliverInput[i].value;
@@ -71,8 +69,11 @@ function updateDeliver() {
 
     if(deliverInputValue == 'oui' ){
         document.querySelector('#amountDeliver').textContent = 1000 ;
+        deliveryAddressInput.style.display = "block";
     }else{
         document.querySelector('#amountDeliver').textContent = 0 ;
+        // element.remove();
+        deliveryAddressInput.style.display = "none";
     }
 
     total = parseInt(document.querySelector('#amountNiu').textContent) + parseInt(document.querySelector('#amountDeliver').textContent) + parseInt(document.querySelector('#amountSeg').textContent);
@@ -97,11 +98,23 @@ function updateSegment() {
 
 
 function updateDeliveryPrice() {
-    if(cityInput.value == 'autres' ){
-        document.querySelector('#amountDeliver').textContent = 2000 ;
-    }else{
-        document.querySelector('#amountDeliver').textContent = 1000 ;
+
+    for(let i = 0; i < deliverInput.length; i++){
+        if(deliverInput[i].checked){
+            deliverInputValue = deliverInput[i].value;
+        }
     }
+
+    if(deliverInputValue == 'oui' ){
+        if(cityInput.value == 'autres' ){
+            document.querySelector('#amountDeliver').textContent = 2000 ;
+        }else{
+            document.querySelector('#amountDeliver').textContent = 1000 ;
+        }
+    }else{
+        document.querySelector('#amountDeliver').textContent = 0 ;
+    }
+
     total = parseInt(document.querySelector('#amountNiu').textContent) + parseInt(document.querySelector('#amountDeliver').textContent) + parseInt(document.querySelector('#amountSeg').textContent);
     TotalValue.textContent = total;
 }

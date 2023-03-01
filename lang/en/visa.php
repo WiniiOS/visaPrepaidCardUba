@@ -168,6 +168,38 @@ return [
     'EnrolmentBloc' => 'Contact person in case of need',
     'EnrolmentBtn' => "Order",
 
+    'EnQ1' => "Do you already have a unique ID number? (Fee: 3000 FCFA)",
+    'EnQ1Button' => "Read more",
+    'Check11' => 'Yes',
+    'Check12' => 'No',
+    'EnQ2' => "Would you like to be delivered?",
+    'Check21' => 'Yes',
+    'Check22' => 'No, I will personally come and collect',
+    'SegTitle' => 'Select a segment',
+
+    // More content
+    'MoreTitle' => "HERE'S WHY YOU MUST HAVE A CERTIFICATE OF TAX REGISTRATION (SINGLE IDENTIFIER NUMBER OR TAXPAYER NUMBER OR TAXPAYER CARD)",
+    'MP1' => "It is important to recall that criminal proceedings will be initiated against those who engage in tax evasion and the sanctions include the payment of fines ranging from FCFA 100,000 to FCFA 100,000",
+    'MP2' => "According to a source from the DGI (General Directorate of Taxes), it is a question of knowing the tax population better in order to ensure that it is in conformity with the tax law, but also to improve tax compliance.",
+    'MH2' => "FOR ALL PROCEDURES, YOU WILL NOW BE REQUIRED TO HAVE A UNIQUE IDENTIFIER IN THE FORM OF A TAX REGISTRATION CERTIFICATE.",
+    'MP3' => "SO WHAT GOOD WILL IT DO YOU TO HAVE THIS CERTIFICATE OF REGISTRATION?",
+    'MList1' => "1- TOUCHING YOUR SALARY AT THE BANK",
+    'MList2' => "2- ACCESSING YOUR BANK ACCOUNT",
+    'MList3' => "3- MAKE YOUR FINANCIAL TRANSACTIONS",
+    'MList4' => "4- GET A CDE, ENEO SUBSCRIPTION",
+    'MList5' => "5- BUYING LAND BY NOTARY",
+    'MList6' => "6- BUYING A VEHICLE",
+    'MList7' => "7- PERFORMING IMPORT & EXPORT OPERATIONS",
+    'MList8' => "8- TOUCHING YOUR RETIREMENT SAVINGS",
+    'MList9' => "9- ANDC...",
+    'MP4' => "DON'T WASTE ANY MORE TIME BECAUSE THE NETWORK IS REALLY SATURATED AT THE MOMENT AND THE DEADLINE IS 30 OCTOBER 2020 TO GET YOUR NUMBER.",
+    'MP5' => "The banks don't expect me anymore because whatever transactions you make from now on they will ask you for your ID and you know the free one never lasts in our country.",
+    'MP6' => "WE OFFER THIS SERVICE TO MAKE IT EASIER FOR YOU TO OBTAIN YOUR UNIQUE IDENTIFICATION NUMBER REGARDLESS OF YOUR GEOGRAPHICAL LOCATION AND AVAILABILITY.",
+    'MButton' => 'Close',
+
+    'CartNui' => 'Unique ID Number',
+    'CartDeliver' => 'Delivery'
+
 
 
     
