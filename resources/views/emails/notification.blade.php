@@ -1,54 +1,57 @@
 <x-mail::message>
-Cher client Merçi d'avoir souscrit !
+# _Confirmation de commande_
 
-Votre commande a été envoyée avec success.
+Cher {{ $surname }},
 
-Nous vous contacterons bientot pour éffectuer votre livraison.
+Nous vous remercions d'avoir passé commande chez LTC GROUP. Nous sommes ravis de vous compter parmi nos clients.
 
-# Veillez verifier que les informations ci-dessous sont correctes
-# Check if your data are correctly saved
+#### _Voici les détails de votre commande_ :
 
-#Recapitulatif de la commande
-
-#Livraison : {{ $deliveryAmount }}
-#Frais Numero ID Unique : {{ $niuAmount }}
-#Segment : {{ $segmentAmount }}
-#Total : {{ $total_order }}
+- Livraison : {{ $deliveryAmount }}
+- Numero ID Unique : {{ $niuAmount }}
+- Segment : {{ $segmentAmount }}
+- Prix Total : {{ $total_order }}
 
 
-# Segment : Segment {{ $segment }}
-#Liste des documents à fournir (Démie carte photo/Photocopie de CNI ou Passeport valide/NIU ou Numero Contribuable/Plan de localisation)
-#Si vous avez souscrit au Segment 2 Standard ou 3 Premium, Vous devrez fournir Un justificatif de revenu(Contrat de travail,bulletin de paie,Registre commerce)
+## _Veuillez vous rassurer que les informations ci-dessous sont exactes :_
 
+- Segment : Segment {{ $segment }}
+- Nom Complet : {{ $surname }} {{ $lastname }}
+- Addresse E-Mail : {{ $email }}
+- Ville : {{ $city }}
+- Quartier : {{ $residentialAddress }}
+- No Telephone : Segment {{ $phone1 }}
+- No Telephone 2 (Optionnel) : {{ $phone2 }}
+- No CNI : {{ $cniNumber }}
+- Lieu de délivrance : {{ $lieuCreationCni }}
+- Date de naissance : {{ $birthday }}
 
-# Nom Complet du Client : {{ $surname }} {{ $lastname }}
-# Addresse Email : {{ $email }}
-# Ville : {{ $city }}
-# Quartier : {{ $residentialAddress }}
-# Telephone : {{ $phone1 }}
-# Telephone 2 (Optionnel) : {{ $phone2 }}
-# Numéro CNI : {{ $cniNumber }}
-# Lieu de délivrance de la CNI : {{ $lieuCreationCni }}
-# Date de naissance : {{ $birthday }}
-# Profession : {{ $profession }}
-# Adressee_De_Livraison : {{ $delivery_address }}
+- Profession : {{ $profession }}
+- Adresse de livraison : {{ $delivery_address }}
+- Je souhaite etre livré : {{ $delivery }}
+- Je souscrit au No Identifiant Unique : {{ $uin }}
 
-# Souhaitez-vous etre livrée ? : {{ $delivery }}
-# Souscrivez-vous au Numero ID Unique : {{ $uin }}
+### _Personne à contacter en cas de besoin :_
 
+- Nom Complet : {{ $toContactName }}
+- Telephone : {{ $toContactPhone }}
+- Addresse : {{ $toContactAddress }}
 
-# Personne à contacter en cas de besoin
+#### _NB : Documents à fournir pour tous les segments du Basic au Premium_
+    1. Une demie carte photo
+    2. Photocopie de la CNI ou Passeport valide
+    3. NIU ou Numero Contribuable
+    4. Plan de localisation
+##### _Document additionnel à fournir au cas ou vous avez souscrit aux segments 2 Standard ou 3 Premium_
+    1. Un justificatif de revenu( Contrat de travail, bulletin de paie, Registre commerce)
 
-# Nom : {{ $toContactName }}
-# Telephone : {{ $toContactPhone }}
-# Addresse : {{ $toContactAddress }}
+#### _Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter à l'adresse suivante : contact@ltcprepaidcard.com_
 
-EN CAS D'ERREUR CONTACTEZ NOUS 
+Nous vous remercions de votre confiance.
 
-<x-mail::button :url="'https://wa.me/237673209375'">
-CONTACT
-</x-mail::button>
+> [Cliquez ici pour Chater sur WhatsApp](https://wa.me/237673209375)
+> [Visitez Nos autres services](https://www.ltcgroup.net/)
 
-Merçi,<br>
-{{ config('app.name') }}
+Cordialement,
+_L'EQUIPE LTC GROUP_
 </x-mail::message>

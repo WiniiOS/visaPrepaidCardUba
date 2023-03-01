@@ -33,10 +33,11 @@ class NotificationMail extends Mailable
      *
      * @return \Illuminate\Mail\Mailables\Envelope
      */
+    
     public function envelope()
     {
         return new Envelope(
-            subject: 'Notification Nouvelle Commande De Carte Visa Prépayée (LTC GROUP)',
+            subject: trans('emails.Subject'),
         );
     }
 
