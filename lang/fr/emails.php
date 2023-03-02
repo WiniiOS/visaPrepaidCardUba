@@ -36,6 +36,7 @@ return [
     'No19' => 'Photocopie de la CNI ou Passeport valide',
     'No20' => 'NIU ou Numero Contribuable ',
     'No21' => 'Plan de localisation ',
+    
     'SubT3' => 'Document additionnel à fournir au cas ou vous avez souscrit aux segments 2 (Standard) ou 3 (Premium)',
     'No22' => 'Un justificatif de revenu( Contrat de travail, bulletin de paie, Registre commerce)',
     'SubT4' => "Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter à l'adresse suivante :",

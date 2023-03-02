@@ -198,9 +198,14 @@ return [
     'MButton' => 'Close',
 
     'CartNui' => 'Unique ID Number',
-    'CartDeliver' => 'Delivery'
+    'CartDeliver' => 'Delivery',
 
-
+    // Page Accusé de reception
+    'AccTitle' => 'Acknowledgement of receipt.',
+    'AccContent' => 'Your order for a visa prepaid card UBA prepaid card has been registered. We have sent you sent you an email notification to check that the data you have sent is
+    sent are correct. In case of errors, please let us know using the whatsapp button below.',
+    'AccButton' => 'Back to Home'
+    
 
     
 ];

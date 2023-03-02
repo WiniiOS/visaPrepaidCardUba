@@ -205,4 +205,11 @@ return [
     'CartNui' => 'Numero ID Unique',
     'CartDeliver' => 'Livraison',
 
+    // Page Accusé de reception
+    'AccTitle' => 'Accusé de réception',
+    'AccContent' => "Votre commande de carte prépayé visa UBA a bien été enregistré. Nous vous avons envoyé un email de notification
+    histoire de verifier que les données envoyées sont exactes. En cas d'erreurs signalez le nous grace au bouton whatsapp ci-dessous.",
+    'AccButton' => "Retour à l'Accueil"
+
+
 ];  

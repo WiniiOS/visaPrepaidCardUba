@@ -1,57 +1,58 @@
 <x-mail::message>
-# _Confirmation de commande_
+# _{{ __("emails.NotiTitle") }}_
 
-Cher {{ $surname }},
+{{ __("emails.Uno") }} {{ $surname }},
 
-Nous vous remercions d'avoir passé commande chez LTC GROUP. Nous sommes ravis de vous compter parmi nos clients.
+{{ __("emails.P1") }}
 
-#### _Voici les détails de votre commande_ :
+#### _{{ __("emails.Desc1") }}_ :
 
-- Livraison : {{ $deliveryAmount }}
-- Numero ID Unique : {{ $niuAmount }}
-- Segment : {{ $segmentAmount }}
-- Prix Total : {{ $total_order }}
+- {{ __("emails.No1") }} {{ $deliveryAmount }}
+- {{ __("emails.No2") }} {{ $niuAmount }}
+- {{ __("emails.No3") }} {{ $segmentAmount }}
+- {{ __("emails.No4") }} {{ $total_order }}
 
 
-## _Veuillez vous rassurer que les informations ci-dessous sont exactes :_
+## _{{ __("emails.SubTitle1") }}_
 
-- Segment : Segment {{ $segment }}
-- Nom Complet : {{ $surname }} {{ $lastname }}
-- Addresse E-Mail : {{ $email }}
-- Ville : {{ $city }}
-- Quartier : {{ $residentialAddress }}
-- No Telephone : Segment {{ $phone1 }}
-- No Telephone 2 (Optionnel) : {{ $phone2 }}
-- No CNI : {{ $cniNumber }}
-- Lieu de délivrance : {{ $lieuCreationCni }}
-- Date de naissance : {{ $birthday }}
+- {{ __("emails.No01") }} segment {{ $segment }}
+- {{ __("emails.No02") }} {{ $surname }} {{ $lastname }}
+- {{ __("emails.No03") }} {{ $email }}
+- {{ __("emails.No04") }} {{ $city }}
+- {{ __("emails.No05") }} {{ $residentialAddress }}
+- {{ __("emails.No06") }}  {{ $phone1 }}
+- {{ __("emails.No07") }} {{ $phone2 }}
+- {{ __("emails.No08") }} {{ $cniNumber }}
+- {{ __("emails.No09") }} {{ $lieuCreationCni }}
+- {{ __("emails.No10") }} {{ $birthday }}
 
-- Profession : {{ $profession }}
-- Adresse de livraison : {{ $delivery_address }}
-- Je souhaite etre livré : {{ $delivery }}
-- Je souscrit au No Identifiant Unique : {{ $uin }}
+- {{ __("emails.No11") }} {{ $profession }}
+- {{ __("emails.No12") }} {{ $delivery_address }}
+- {{ __("emails.No13") }} {{ $delivery }}
+- {{ __("emails.No14") }} {{ $uin }}
 
-### _Personne à contacter en cas de besoin :_
+### _{{ __("emails.SubT2") }}_
 
-- Nom Complet : {{ $toContactName }}
-- Telephone : {{ $toContactPhone }}
-- Addresse : {{ $toContactAddress }}
+- {{ __("emails.No15") }} {{ $toContactName }}
+- {{ __("emails.No16") }} {{ $toContactPhone }}
+- {{ __("emails.No17") }} {{ $toContactAddress }}
 
-#### _NB : Documents à fournir pour tous les segments du Basic au Premium_
-    1. Une demie carte photo
-    2. Photocopie de la CNI ou Passeport valide
-    3. NIU ou Numero Contribuable
-    4. Plan de localisation
-##### _Document additionnel à fournir au cas ou vous avez souscrit aux segments 2 Standard ou 3 Premium_
-    1. Un justificatif de revenu( Contrat de travail, bulletin de paie, Registre commerce)
+#### _{{ __("emails.NbTitle") }}_
+    1. {{ __("emails.No18") }}
+    2. {{ __("emails.No19") }}
+    3. {{ __("emails.No20") }}
+    4. {{ __("emails.No21") }}
 
-#### _Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter à l'adresse suivante : contact@ltcprepaidcard.com_
+##### _{{ __("emails.SubT3") }}_
+    1. {{ __("emails.No22") }}
 
-Nous vous remercions de votre confiance.
+#### _{{ __("emails.SubT4") }} contact@ltcprepaidcard.com_
 
-> [Cliquez ici pour Chater sur WhatsApp](https://wa.me/237673209375)
-> [Visitez Nos autres services](https://www.ltcgroup.net/)
+{{ __("emails.Paro1") }}
 
-Cordialement,
-_L'EQUIPE LTC GROUP_
+> [{{ __("emails.Link1") }}](https://wa.me/237673209375)
+> [{{ __("emails.Link2") }}](https://www.ltcgroup.net/)
+
+{{ __("emails.End1") }},
+_{{ __("emails.End2") }}_
 </x-mail::message>
