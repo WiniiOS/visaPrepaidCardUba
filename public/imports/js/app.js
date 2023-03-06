@@ -13,7 +13,6 @@ const cityInput = document.querySelector('#citydelivery');
 const deliveryAddressInput = document.querySelector('#deliveryDiv');
 
 
-
 for(let i = 0; i < idInput.length; i++){
     idInput[i].addEventListener('change', updateID);
 }
@@ -122,5 +121,3 @@ function updateDeliveryPrice() {
 
 // document.querySelector('#total').textContent = total;
 TotalValue.textContent = total;
-
-

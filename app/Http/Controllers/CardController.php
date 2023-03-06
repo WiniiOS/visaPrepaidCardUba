@@ -147,7 +147,7 @@ class CardController extends Controller
         Mail::to($client_email)->send(new NotificationMail(
             $request->email,$request->surname,$request->lastname,$request->city,$request->residentialAddress,$request->phone1,
             $request->phone2,$request->cniNumber,$request->lieuCreationCni,$request->birthday,$request->profession,$request->toContactName,
-            $request->toContactPhone,$request->toContactAddress,$request->segment,$request->delivery_address,$uin,$delivery,$total_order,$deliveryAmount,$niuAmount,$segmentAmount));
+            $request->toContactPhone,$request->toContactAddress,$request->segment,strval($request->delivery_address),$uin,$delivery,$total_order,$deliveryAmount,$niuAmount,$segmentAmount));
         
             // on redirige vers whatsapp
         return redirect('message');

@@ -50,7 +50,7 @@
 
 {{ __("emails.Paro1") }}
 
-> [{{ __("emails.Link1") }}](https://wa.me/237673209375)
+> [{{ __("emails.Link1") }}](https://wa.me/237673209375) <br/>
 > [{{ __("emails.Link2") }}](https://www.ltcgroup.net/)
 
 {{ __("emails.End1") }},
